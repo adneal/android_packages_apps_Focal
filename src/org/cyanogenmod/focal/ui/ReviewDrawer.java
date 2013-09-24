@@ -29,6 +29,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Handler;
 import android.provider.MediaStore;
+import android.provider.MediaStore.Images.ImageColumns;
+import android.provider.MediaStore.MediaColumns;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
