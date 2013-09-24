@@ -1455,7 +1455,11 @@ public class CameraActivity extends Activity implements CameraManager.CameraRead
         public boolean onScale(ScaleGestureDetector detector) {
             Camera.Parameters params = mCamManager.getParameters();
 
-            if (params == null) return false;
+            if (params == null) {
+                return false;
+            } else if (!params.isZoomSupported()) {
+                return false;
+            }
 
             if (detector.getScaleFactor() > 1.0f) {
                 params.setZoom(Math.min(params.getZoom() + 1, params.getMaxZoom()));
